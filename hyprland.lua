@@ -1,0 +1,59 @@
+-- Labra: theme-local borders, corners and soft floating window shadows.
+local active_border_base = "rgba(89974ab3)"
+local active_border_bottom = "rgba(fd5ea0b3)" -- colors.toml: bright_blue, with the existing border opacity.
+local active_border_color = {
+  -- Bottom to top: the transition spans 40–60% of the window height.
+  colors = {
+    active_border_bottom, active_border_bottom,
+    active_border_base, active_border_base, active_border_base,
+    active_border_base, active_border_base, active_border_base,
+  },
+  angle = 270,
+}
+local inactive_border_color = "rgba(3b403b99)"
+
+hl.config({
+  general = {
+    border_size = 1,
+    col = {
+      active_border = active_border_color,
+      inactive_border = inactive_border_color,
+    },
+  },
+  decoration = {
+    rounding = 4,
+    active_opacity = 0.94,
+    inactive_opacity = 0.94,
+    fullscreen_opacity = 1.0,
+    shadow = {
+      enabled = true,
+      range = 20,
+      render_power = 3,
+      -- A compact black shadow gently lifts windows off the background.
+      color = "rgba(050604e6)",
+      color_inactive = "rgba(00000000)",
+      offset = { 0, 4 },
+      scale = 1.0,
+    },
+  },
+  group = {
+    col = {
+      border_active = active_border_color,
+      border_inactive = inactive_border_color,
+    },
+  },
+})
+
+hl.window_rule({
+  opacity = "1.0 override 1.0 override",
+  match = {
+    class = "^(imv|mpv|vlc|org.gnome.NautilusPreviewer|org.gnome.Evince|com.gabm.satty|zoom|org.kde.kdenlive|com.obsproject.Studio|com.github.PintaProject.Pinta)$",
+  },
+})
+
+hl.window_rule({
+  opacity = "1.0 override 1.0 override",
+  match = {
+    class = "^(gimp|com.github.xournalpp.xournalpp|nwg-look|system-config-printer)$",
+  },
+})

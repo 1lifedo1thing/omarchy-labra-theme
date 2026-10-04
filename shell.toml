@@ -1,0 +1,165 @@
+# Labra — shell surfaces and borders.
+# Window border size and corner radius are set in hyprland.lua.
+
+[bar]
+background       = "#040704"
+background-alpha = 1.0
+text             = "#d3d7b5"
+active           = "#ee585d"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+active-border-width = 1
+active-border            = "rgba(fd5ea0b3) rgba(fd5ea0b3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) 270deg"
+active-border-foreground = "rgba(89974ab3)"
+soft-border = "rgba(fd5ea0b3) rgba(e3738db3) rgba(c88378b3) rgba(aa8e63b3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) rgba(89974ab3) 270deg"
+
+[controls]
+
+normal-color        = "#d3d7b5"
+normal-fill-alpha   = 0.04
+normal-border       = "#d3d7b5"
+normal-border-width = 1
+normal-border-alpha = 0.4
+
+hover-cursor-color        = "#d3d7b5"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#d3d7b5"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.25
+
+focus-color        = "#d3d7b5"
+focus-fill-alpha   = 0.08
+focus-border       = "#d3d7b5"
+focus-border-width = 1
+focus-border-alpha = 0.25
+
+selected-color        = "#d3d7b5"
+selected-fill-alpha   = 0.18
+selected-border       = "#d3d7b5"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+border-width = 1
+background       = "#040704"
+background-alpha = 1.0
+text             = "#d3d7b5"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+border-width = 1
+background       = "#040704"
+background-alpha = 0.97
+text             = "#d3d7b5"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+floating-shadow = true
+border-width = 1
+background       = "#040704"
+background-alpha = 1.0
+text             = "#d3d7b5"
+border           = "hyprland.soft-border"
+border-alpha     = 1.0
+countdown        = "#e33d84"
+
+[launcher]
+border-width = 1
+background                = "#040704"
+background-alpha          = 0.95
+text                      = "#d3d7b5"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#040704"
+scrim-alpha               = 0.5
+selected-background       = "#d3d7b5"
+selected-background-alpha = 0.08
+selected-text             = "#e33d84"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[menu]
+compact = true
+width = 295
+border-radius = 4
+extra-bottom-padding = 4
+floating-shadow = true
+shadow-opacity = 0.4
+shadow-spread = 0
+border-width = 1
+background                = "#040704"
+background-alpha          = 1.0
+text                      = "#d3d7b5"
+border                    = "hyprland.active-border"
+border-alpha              = 1.0
+scrim                     = "#040704"
+scrim-alpha               = 0.0
+selected-background       = "#e33d84"
+selected-background-alpha = 0.0
+selected-text             = "#e33d84"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.0
+selected-border-width     = 0
+
+[polkit]
+border-width = 1
+background       = "#040704"
+background-alpha = 1.0
+text             = "#d3d7b5"
+text-error       = "#ee585d"
+border           = "hyprland.active-border"
+border-error     = "#ee585d"
+border-alpha     = 1.0
+scrim            = "#040704"
+scrim-alpha      = 0.5
+accent           = "#e33d84"
+
+[lock]
+border-width = 1
+background       = "#040704"
+background-alpha = 1.0
+text             = "#d3d7b5"
+placeholder      = "#9ea188"
+text-error       = "#ee585d"
+border           = "hyprland.soft-border"
+border-active    = "hyprland.soft-border"
+border-error     = "#ee585d"
+border-alpha     = 1.0
+selection        = "#e33d84"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#040704"
+scrim-alpha             = 0.5
+text                    = "#d3d7b5"
+selected-border         = "#e33d84"
+selected-border-alpha   = 1.0
+unselected-border       = "#d3d7b5"
+unselected-border-alpha = 0.28
+
+# Shared by the local menu, notification and OSD plugins.
+[floating-shadow]
+blur = 18
+opacity = 0.55
+offset-y = 2
+
+[osd]
+floating-shadow = true
+border-width = 1
+border = "hyprland.soft-border"
+border-alpha = 1.0
